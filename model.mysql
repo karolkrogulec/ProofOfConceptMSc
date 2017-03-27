@@ -7,24 +7,6 @@ CREATE TABLE IF NOT EXISTS Users
     UserName VARCHAR(50) NOT NULL UNIQUE,
     Password VARCHAR(50) NOT NULL,
     FullName VARCHAR(100) NOT NULL,
+    Greeting VARCHAR(100) NOT NULL,
     PRIMARY KEY(UserId)
 );
-
-CREATE TABLE IF NOT EXISTS Greetings
-(
-    GreetingID INT NOT NULL UNIQUE,
-    UserId INT UNIQUE,
-    Greeting VARCHAR(250) DEFAULT 'Welcome to the Application!' NOT NULL,
-    PRIMARY KEY(GreetingID)
-);
-
-
-# Create FKs
-ALTER TABLE Users
-    ADD    FOREIGN KEY (UserId)
-    REFERENCES Greetings(UserId)
-;
-    
-
-# Create Indexes
-

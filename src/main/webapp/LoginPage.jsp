@@ -13,7 +13,7 @@
 	</head>
 
 	<body>
-		<form action="LoginServlet">
+		<form action="LoginController">
 
 			Please enter your username 		
 			<input type="text" name="un"/><br>		

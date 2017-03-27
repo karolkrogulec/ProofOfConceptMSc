@@ -1,12 +1,31 @@
 package Controllers;
 
 import Model.*;
+import Dao.*;
+
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 /**
 * @generated
 */
 public class GreetingsController {
+    
+        //                          Operations                                  
+    
+    /**
+    * @generated
+    */
+    public String UpdateGreeting() {
+        //TODO
+        return "";
+    }
     
     /**
     * @generated
@@ -47,17 +66,5 @@ public class GreetingsController {
     public void setNewGreeting(String NewGreeting) {
         this.NewGreeting = NewGreeting;
     }
-    
-
-    //                          Operations                                  
-    
-    /**
-    * @generated
-    */
-    public String UpdateGreeting() {
-        //TODO
-        return "";
-    }
-    
-    
+   
 }

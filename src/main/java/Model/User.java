@@ -1,4 +1,4 @@
-package model;
+package Model;
 
 
 /**
@@ -43,7 +43,7 @@ public class User {
     /**
     * @generated
     */
-    public Integer setUserId(Integer UserId) {
+    public void setUserId(Integer UserId) {
         this.UserId = UserId;
     }
     
@@ -57,7 +57,7 @@ public class User {
     /**
     * @generated
     */
-    public String setUsername(String Username) {
+    public void setUsername(String Username) {
         this.Username = Username;
     }
     
@@ -71,7 +71,7 @@ public class User {
     /**
     * @generated
     */
-    public String setPassword(String Password) {
+    public void setPassword(String Password) {
         this.Password = Password;
     }
     
@@ -85,7 +85,7 @@ public class User {
     /**
     * @generated
     */
-    public String setFullName(String FullName) {
+    public void setFullName(String FullName) {
         this.FullName = FullName;
     }
     
@@ -99,7 +99,7 @@ public class User {
     /**
     * @generated
     */
-    public String setGreeting(String Greeting) {
+    public void setGreeting(String Greeting) {
         this.Greeting = Greeting;
     }
     
