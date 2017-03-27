@@ -15,16 +15,24 @@ import javax.servlet.http.HttpSession;
 /**
 * @generated
 */
-public class GreetingsController {
-    
-        //                          Operations                                  
-    
-    /**
-    * @generated
-    */
-    public String UpdateGreeting() {
-        //TODO
-        return "";
+public class GreetingsController extends HttpServlet{
+        
+        public void doGet(HttpServletRequest request, HttpServletResponse response) 
+			           throws ServletException, java.io.IOException {
+	    try
+{
+     String greeting = request.getParameter("gr");
+     HttpSession session = request.getSession(true);
+     int id = (Integer) session.getAttribute("id");
+     UserDao.updateGreet(greeting,id);
+     session.setAttribute("greeting",greeting);
+     response.sendRedirect("UserLogged.jsp");
+ }
+     catch (Throwable theException) 	    
+{
+     System.out.println(theException); 
+}
+			              		               
     }
     
     /**
@@ -66,5 +74,4 @@ public class GreetingsController {
     public void setNewGreeting(String NewGreeting) {
         this.NewGreeting = NewGreeting;
     }
-   
 }

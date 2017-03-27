@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 /**
 * @generated
 */
-public class LoginController  extends HttpServlet {
+public class LoginController extends HttpServlet {
     
     public void doGet(HttpServletRequest request, HttpServletResponse response) 
 			           throws ServletException, java.io.IOException {
@@ -35,6 +35,8 @@ try
           HttpSession session = request.getSession(true);	    
           session.setAttribute("fullname",getCurrentUser().getFullName()); 
           session.setAttribute("greeting",getCurrentUser().getGreeting()); 
+          session.setAttribute("id",getCurrentUser().getUserId()); 
+          
           response.sendRedirect("UserLogged.jsp"); //logged-in page      		
      } else 
           response.sendRedirect("InvalidLogin.jsp"); //error page 
@@ -51,16 +53,6 @@ catch (Throwable theException)
     * @generated
     */
     private User CurrentUser;
-    
-        //                          Operations                                  
-    
-    /**
-    * @generated
-    */
-    public User LogIn() {
-        //TODO
-        return null;
-    }
 
     
     /**

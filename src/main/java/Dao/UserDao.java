@@ -96,4 +96,60 @@ import java.sql.*;
 return user;
 	
       }	
+public static void updateGreet(String greet, int id) {
+	
+         //preparing some objects for connection 
+         Statement stmt = null;    
+ 
+	    
+         String updateQuery =
+               "update Users set Greeting='"
+                        + greet
+                        + "' where UserId='"
+                        + id
+                        + "'";
+	    
+      System.out.println("Query: "+updateQuery);
+	    
+      try 
+      {
+         //connect to DB 
+         currentCon = ConnectionManager.getConnection();
+         stmt=currentCon.createStatement();
+         stmt.executeUpdate(updateQuery);
+	       
+      } 
+
+      catch (Exception ex) 
+      {
+         System.out.println("An Exception has occurred! " + ex);
+      } 
+	    
+      //some exception handling
+      finally 
+      {
+         if (rs != null)	{
+            try {
+               rs.close();
+            } catch (Exception e) {}
+               rs = null;
+            }
+	
+         if (stmt != null) {
+            try {
+               stmt.close();
+            } catch (Exception e) {}
+               stmt = null;
+            }
+	
+         if (currentCon != null) {
+            try {
+               currentCon.close();
+            } catch (Exception e) {
+            }
+
+            currentCon = null;
+         }
+      }
+      }
    }

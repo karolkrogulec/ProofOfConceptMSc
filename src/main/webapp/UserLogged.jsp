@@ -23,9 +23,9 @@
             <%= greet %> <%= full %>
             	<body>
             	
-		<form action="GreetingController">	
+		<form action="GreetingsController">	
 		
-			Chenge you greeting
+			Chenge your greeting
 			<input type="text" name="gr"/>
 			
 			<input type="submit" value="change">			
