@@ -14,7 +14,7 @@ package Utils;
         
          try
          {
-             String url = "jdbc:mysql://db:3306/";
+             String url = "jdbc:mysql://10.0.18.2:3306/";
              String dbName = "ProofOfConcept";
              String driver = "com.mysql.jdbc.Driver";
              String userName = "prototype";
