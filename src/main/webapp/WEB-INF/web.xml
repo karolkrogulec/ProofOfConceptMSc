@@ -4,4 +4,18 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>Controllers.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/loginController</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>LoginPage.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>

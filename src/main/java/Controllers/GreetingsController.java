@@ -1,4 +1,6 @@
-package model;
+package Controllers;
+
+import Model.*;
 
 
 /**
@@ -28,7 +30,7 @@ public class GreetingsController {
     /**
     * @generated
     */
-    public User setCurrentUser(User CurrentUser) {
+    public void setCurrentUser(User CurrentUser) {
         this.CurrentUser = CurrentUser;
     }
     
@@ -42,7 +44,7 @@ public class GreetingsController {
     /**
     * @generated
     */
-    public String setNewGreeting(String NewGreeting) {
+    public void setNewGreeting(String NewGreeting) {
         this.NewGreeting = NewGreeting;
     }
     

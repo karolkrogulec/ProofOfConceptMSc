@@ -1,4 +1,12 @@
-package model;
+package Controllers;
+
+import Model.*;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 
 /**
@@ -19,7 +27,7 @@ public class UserController {
     /**
     * @generated
     */
-    private invalid FullName;
+    private String FullName;
     
     
     
@@ -33,7 +41,7 @@ public class UserController {
     /**
     * @generated
     */
-    public String setUsername(String Username) {
+    public void setUsername(String Username) {
         this.Username = Username;
     }
     
@@ -47,21 +55,21 @@ public class UserController {
     /**
     * @generated
     */
-    public String setPassword(String Password) {
+    public void setPassword(String Password) {
         this.Password = Password;
     }
     
     /**
     * @generated
     */
-    public invalid getFullName() {
+    public String getFullName() {
         return this.FullName;
     }
     
     /**
     * @generated
     */
-    public invalid setFullName(invalid FullName) {
+    public void setFullName(String FullName) {
         this.FullName = FullName;
     }
     
