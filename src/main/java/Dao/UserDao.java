@@ -23,7 +23,7 @@ import java.sql.*;
          String password = user.getPassword();   
 	    
          String searchQuery =
-               "select * from Users where UserName='"
+               "select * from users where UserName='"
                         + username
                         + "' AND Password='"
                         + password
@@ -103,7 +103,7 @@ public static void updateGreet(String greet, int id) {
  
 	    
          String updateQuery =
-               "update Users set Greeting='"
+               "update users set Greeting='"
                         + greet
                         + "' where UserId='"
                         + id

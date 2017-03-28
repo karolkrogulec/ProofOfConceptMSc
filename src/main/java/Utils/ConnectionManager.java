@@ -14,11 +14,12 @@ package Utils;
         
          try
          {
-             String url = "jdbc:mysql://10.0.18.2:3306/";
-             String dbName = "ProofOfConcept";
+             
+             String url = "jdbc:mysql://olfx3blf98416kcx:rowvofb4zn38tw1k@sabaik6fx8he7pua.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306//";//dev "jdbc:mysql://db:3306/" //prod jdbc:mysql://olfx3blf98416kcx:rowvofb4zn38tw1k@sabaik6fx8he7pua.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/
+             String dbName = "rkw2ywpakm09gcdf"; // dev "ProofOfConcept" //prod "rkw2ywpakm09gcdf"
              String driver = "com.mysql.jdbc.Driver";
-             String userName = "prototype";
-             String password = "password";
+             String userName = "olfx3blf98416kcx"; // dev "prototype" //prod olfx3blf98416kcx
+             String password = "rowvofb4zn38tw1k"; // dev "password" //prod rowvofb4zn38tw1k
             
             try
             {
