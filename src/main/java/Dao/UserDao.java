@@ -12,6 +12,9 @@ public class UserDao {
     static ResultSet  rs         = null;
 
     //metod to authenticate user taking user instance from user controller
+    /**
+     * @generated
+     */
     public static User login(User user) {
 
         //preparing some objects for connection 
@@ -98,6 +101,11 @@ public class UserDao {
         return user;
     }
 
+    /**
+     * @generated
+     */
+    //method used to update greeting that take new greeting and current 
+    //user id as parameters
     public static void updateGreet(String greet, int id) {
 
         //preparing some objects for connection 
@@ -148,6 +156,7 @@ public class UserDao {
             }
         }
     }
+
     //method to add new user to the database takimg username, password and fullname
     public static void addUser(String newUsername, String newPassword, String newFullname) {
         //local database variables
@@ -174,7 +183,7 @@ public class UserDao {
                 //assigning the user id to the highest value +1
                 highestId = rs.getInt("UserId") + 1;
                 System.out.println("Current highest id " + highestId);
-            //if no user found in the db, first id must be set to 1
+                //if no user found in the db, first id must be set to 1
             } else {
                 highestId = 1;
             }
