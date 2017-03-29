@@ -17,12 +17,15 @@
       <body>
 
          <center>
+            <%-- displaying the fullname and the freeting of the
+            current user pushed to the session--%> 
             <% String greet = (String) session.getAttribute("greeting");%>
             <% String full = (String) session.getAttribute("fullname");%>
 			
             <%= greet %> <%= full %>
             	<body>
-            	
+        <%-- Update greeting web form
+        Greeting controller called to handle the request--%> 	
 		<form action="GreetingsController">	
 		
 			Chenge your greeting

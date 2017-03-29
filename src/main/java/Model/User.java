@@ -4,6 +4,7 @@ package Model;
 /**
 * @generated
 */
+//user entity that will be used by other classes in the application
 public class User {
     
     /**

@@ -15,52 +15,42 @@ import javax.servlet.http.HttpSession;
 /**
 * @generated
 */
+//class that will be used to control the greeting update
 public class GreetingsController extends HttpServlet{
+    
+    //variable to stroe new greeting		               
+        /**
+    * @generated
+    */
+    private String NewGreeting;
         
         public void doGet(HttpServletRequest request, HttpServletResponse response) 
 			           throws ServletException, java.io.IOException {
+    
 	    try
 {
-     String greeting = request.getParameter("gr");
+     //receiving the new reetig from the htyp rewqest
+     setNewGreeting(request.getParameter("gr"));
+     //receiving current seesion
      HttpSession session = request.getSession(true);
+     //receiving current user's id
      int id = (Integer) session.getAttribute("id");
-     UserDao.updateGreet(greeting,id);
-     session.setAttribute("greeting",greeting);
+     //calling update greet method and passing new greeting and user id as parameters
+     UserDao.updateGreet(getNewGreeting(),id);
+     //setting new greeing in the seesion
+     session.setAttribute("greeting",getNewGreeting());
+     //redirecting back to the logged user page
      response.sendRedirect("UserLogged.jsp");
  }
+     //catching the exception if any
      catch (Throwable theException) 	    
 {
+     //outputting the error stack back to the console
      System.out.println(theException); 
 }
 			              		               
     }
-    
-    /**
-    * @generated
-    */
-    private User CurrentUser;
-    
-    /**
-    * @generated
-    */
-    private String NewGreeting;
-    
-    
-    
-    /**
-    * @generated
-    */
-    public User getCurrentUser() {
-        return this.CurrentUser;
-    }
-    
-    /**
-    * @generated
-    */
-    public void setCurrentUser(User CurrentUser) {
-        this.CurrentUser = CurrentUser;
-    }
-    
+    //getter and setter for new greeting
     /**
     * @generated
     */

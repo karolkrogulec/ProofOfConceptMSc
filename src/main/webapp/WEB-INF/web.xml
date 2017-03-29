@@ -14,6 +14,11 @@
         <servlet-name>greeting</servlet-name>
         <servlet-class>Controllers.GreetingsController</servlet-class>
     </servlet>
+    
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>Controllers.UserController</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -23,6 +28,11 @@
     <servlet-mapping>
         <servlet-name>greeting</servlet-name>
         <url-pattern>/GreetingsController</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/UserController</url-pattern>
     </servlet-mapping>
 
     <welcome-file-list>

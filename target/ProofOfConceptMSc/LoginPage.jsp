@@ -8,11 +8,13 @@
 
 <html>
 	<head>
-                                <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
 		<title>Login Page</title>
 	</head>
 
 	<body>
+	   <%-- login web form calling the login
+	   controller to handle the request--%> 
 		<form action="LoginController">
 
 			Please enter your username 		

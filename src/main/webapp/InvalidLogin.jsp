@@ -16,7 +16,24 @@
 	
       <body>
          <center>
-            Sorry, you are not a registered user! Please sign up first
+            <%-- displaying user not found error message --%> 
+            Sorry, you are not a registered user! Please sign up below first
+		<%-- web form to create new user account
+		calling user contrller to handle the request--%> 
+		<form action="UserController">
+
+			Please enter your username 		
+			<input type="text" name="nu"/><br>		
+		
+			Please enter your password
+			<input type="text" name="np"/><br>
+			
+			Please enter your full name 		
+			<input type="text" name="nf"/><br>	
+				
+			<input type="submit" value="create account">			
+		
+		</form>
          </center>
       </body>
 	
